@@ -6,7 +6,7 @@ This project is a comprehensive Next.js web application that demonstrates fundam
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this project, you will:
 
@@ -22,7 +22,7 @@ By completing this project, you will:
 
 ---
 
-## ✅ Requirements
+## Requirements
 ### Technical Requirements
 - Node.js (v16 or later)
 - npm or yarn
@@ -58,7 +58,7 @@ By completing this project, you will:
 
    ---
 
-   ### Best Practices
+### Best Practices
 . **Component Architecture**
    - Follow atomic design principles
    - Separate presentational and container components
