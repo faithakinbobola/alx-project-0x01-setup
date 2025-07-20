@@ -1,14 +1,14 @@
 import UserCard from "@/components/common/UserCard";
 import UserModal from "@/components/common/UserModal";
 import Header from "@/components/layout/Header";
-import { UserData, UserProps } from "@/interfaces"
+import { UserProps } from "@/interfaces"
 import { useState } from "react";
 
 const Users: React.FC<UserProps[]> = ({ posts }) => {
     const [isModalOpen, setModalOpen] = useState(false);
-    const [user, setUser] = useState<UserData | null>(null);
+    const [user, setUser] = useState<UserProps | null>(null);
 
-    const handleAddUser = (nweUser: UserData) => {
+    const handleAddUser = (nweUser: UserProps) => {
         setUser({...nweUser, id: posts.length + 1})
     }
     
@@ -18,7 +18,7 @@ const Users: React.FC<UserProps[]> = ({ posts }) => {
             <main className="p-4">
                 <div className="flex justify-between">
                     <h1 className="text-2xl font-semibold">User Information</h1>
-                    <button onClick={() => setModalOpen(true)} className="bg-blue-700 px-4 py-2 rounded-full text-white">Add User</button>
+                    <button onClick={() => setModalOpen(true)} className="bg-blue-700 px-4 py-2 rounded-full text-white">Add Post</button>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                     {
