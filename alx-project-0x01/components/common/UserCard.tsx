@@ -1,6 +1,6 @@
 import { UserProps } from "@/interfaces";
 
-const UserCard: React.FC<UserProps> = ({ id, name, username, email, address, phone, website, company }) => {
+const UserCard: React.FC<UserProps> = ({ id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName, catchPhrase, bs }) => {
     return (
         <div className="w-4/5 rounded-xl  p-5 shadow-lg bg-white mx-auto" >
             <div className="pb-4">
@@ -33,27 +33,27 @@ const UserCard: React.FC<UserProps> = ({ id, name, username, email, address, pho
                     </tr>
                     <tr>
                         <td className="p-2 text-gray-500">Address:</td>
-                        <td className="p-2 font-semibold">{address.street}, {address.suite} {address.city}</td>
+                        <td className="p-2 font-semibold">{street}, {suite} {city}</td>
                     </tr>
                     <tr>
                         <td className="p-2 text-gray-500">Zip:</td>
-                        <td className="p-2 font-semibold">{address.zipcode}</td>
+                        <td className="p-2 font-semibold">{zipcode}</td>
                     </tr>
                     <tr>
                         <td className="p-2 text-gray-500">Geo:</td>
-                        <td className="p-2 font-semibold">{address.geo.lat}, {address.geo.lng}</td>
+                        <td className="p-2 font-semibold">{lat}, {lng}</td>
                     </tr>
                     <tr>
                         <td className="p-2 text-gray-500">Company:</td>
-                        <td className="p-2 font-semibold">{company.name}</td>
+                        <td className="p-2 font-semibold">{companyName}</td>
                     </tr>
                     <tr>
                         <td className="p-2 text-gray-500">Company Catch Phrase:</td>
-                        <td className="p-2 font-semibold">{company.catchPhrase}</td>
+                        <td className="p-2 font-semibold">{catchPhrase}</td>
                     </tr>
                     <tr>
                         <td className="p-2 text-gray-500">Company B.S:</td>
-                        <td className="p-2 font-semibold">{company.bs}</td>
+                        <td className="p-2 font-semibold">{bs}</td>
                     </tr>
                 </tbody>
             </table>
